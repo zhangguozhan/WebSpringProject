@@ -2,7 +2,7 @@ package com.spring.in.action.c1;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 //import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
+//import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import com.spring.in.action.c1.inter.Knight;
 
