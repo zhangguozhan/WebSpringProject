@@ -12,7 +12,7 @@ public class CDPlayer {
 	
 
 /*	
- * @Autowired可以在任意方法，但是如果放在非构造器方法，那么不能存在不带@Autowired的构造器方法
+ * @Autowired鍙互鍦ㄤ换鎰忔柟娉曪紝浣嗘槸濡傛灉鏀惧湪闈炴瀯閫犲櫒鏂规硶锛岄偅涔堜笉鑳藉瓨鍦ㄤ笉甯Autowired鐨勬瀯閫犲櫒鏂规硶
  */
 	
 //	@Autowired

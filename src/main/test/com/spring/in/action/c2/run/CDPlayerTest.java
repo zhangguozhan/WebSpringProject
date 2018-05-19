@@ -25,7 +25,7 @@ public class CDPlayerTest {
 	@Test
 	public void cdSouldNotBeNull() {
 		try{
-			assertNotNull(cd); //对象为空抛出错误。
+			assertNotNull(cd); //涓虹┖鎶涘嚭閿欒
 			cd.play();
 		}catch(Throwable t) {
 			t.printStackTrace();
