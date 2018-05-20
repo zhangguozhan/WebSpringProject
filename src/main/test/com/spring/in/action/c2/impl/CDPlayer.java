@@ -15,10 +15,10 @@ public class CDPlayer {
  * @Autowired可以在任意方法，但是如果放在非构造器方法，那么不能存在不带@Autowired的构造器方法
  */
 	
-//	@Autowired
-//	public CDPlayer(CompactDisc cd) {
-//		this.cd = cd;
-//	}
+	@Autowired
+	public CDPlayer(CompactDisc cd) {
+		this.cd = cd;
+	}
 	
 	public void play() {
 		cd.play();

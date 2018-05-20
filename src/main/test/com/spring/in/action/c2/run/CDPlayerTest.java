@@ -8,13 +8,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.spring.in.action.c2.config.CDPlayerConfig;
+//import com.spring.in.action.c2.config.CDPlayerConfig;
+import com.spring.in.action.c2.config.CDPlayerConfig_javaConfig;
 import com.spring.in.action.c2.impl.CDPlayer;
 import com.spring.in.action.c2.inter.CompactDisc;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = CDPlayerConfig.class)
-public class CDPlayerTest {
+//@ContextConfiguration(classes = CDPlayerConfig.class)	//CDPlayerConfig使用自动装配扫描获取benan
+@ContextConfiguration(classes = CDPlayerConfig_javaConfig.class)	//CDPlayerConfig_javaConfig使用java配置方式获取benan
+public class CDPlayerTest {	//CDPlayerTest都使用自动装配获取bean
 	
 	@Autowired
 	private CompactDisc cd;
