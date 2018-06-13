@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import com.spring.in.action.c2.inter.CompactDisc;
 
-@Component
+@Component("hello world")
 public class CDPlayer {
 	
 	private CompactDisc cd;
