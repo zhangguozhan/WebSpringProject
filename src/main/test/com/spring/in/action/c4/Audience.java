@@ -1,7 +1,9 @@
 package com.spring.in.action.c4;
 
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -28,7 +30,7 @@ public class Audience {
 	@Pointcut("execution(** com.spring.in.action.c4.inter.Performance.perform(..))")
 	public void performce(){}
 	
-	@Before("execution(** com.spring.in.action.c4.inter.Performance.perform(..))")
+/*	@Before("execution(** com.spring.in.action.c4.inter.Performance.perform(..))")
 	public void silenceCellPhones() {
 		System.out.println("Silencing cell phones ");
 	}
@@ -46,7 +48,31 @@ public class Audience {
 	@AfterThrowing("performce()")
 	public void demandRefund() {
 		System.out.println("Demanding a refund");
+	}*/
+	
+	/**
+	 * 可以使用一个@Around换掉上面4个
+	 * @return 
+	 */
+	@Around("performce()")
+	public void watchPerformance(ProceedingJoinPoint jp) {
+		try {
+			System.out.println("Silencing cell phones ");
+			System.out.println("Taking seates ");
+			jp.proceed();
+			System.out.println("CLAP CLAP CLAP ");
+		} catch (Throwable e) {
+			// TODO: handle exception
+			System.out.println("Demanding a refund");
+		}
 	}
 	
-	
+	/**
+	 * 带参数的切点
+	 * @param name
+	 */
+	@Before("execution(** com.spring.in.action.c4.inter.Performance.dunce(String)) && args(name)")
+	public void beforeDunce(String name) {
+		System.out.println("before dunce --"+name);
+	}
 }

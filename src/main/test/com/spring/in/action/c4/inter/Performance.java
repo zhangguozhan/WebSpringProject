@@ -4,4 +4,6 @@ public interface Performance {
 
 	public void perform() throws Exception;
 	
+	public void dunce(String name);
+	
 }

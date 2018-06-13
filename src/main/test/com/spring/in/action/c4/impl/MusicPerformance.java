@@ -13,4 +13,10 @@ public class MusicPerformance implements Performance{
 		System.out.println("啊 啊啊啊  啊啊啊啊啊啊啊 啊啊啊啊啊                      。。。。。。。。。。。。。。。。");
 	}
 
+	@Override
+	public void dunce(String name) {
+		// TODO Auto-generated method stub
+		System.out.println("MusicPerformance--"+name);
+	}
+
 }

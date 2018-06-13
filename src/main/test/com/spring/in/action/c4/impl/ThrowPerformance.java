@@ -13,4 +13,10 @@ public class ThrowPerformance implements Performance{
 		throw new Exception();
 	}
 
+	@Override
+	public void dunce(String name) {
+		// TODO Auto-generated method stub
+		System.out.println("ThrowPerformance--"+name);
+	}
+
 }

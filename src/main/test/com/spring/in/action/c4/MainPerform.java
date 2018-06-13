@@ -14,6 +14,7 @@ public class MainPerform {
 //		Performance perform = (Performance) context.getBean("throwPerform");
 		Performance perform = (Performance) context.getBean("musicPerform");
 		perform.perform();
+		perform.dunce("hello world !");
 
 	}
 
