@@ -5,6 +5,10 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+/**
+ * @author zgz19
+ *
+ */
 public class HomeControllerTest {
 
 	public static void main(String[] args) throws Exception {
